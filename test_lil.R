@@ -1,4 +1,4 @@
-# For more robust functions error handling should be applied. Input has to be checked for:
+# For more robust functions error handling, input checking functions should be applied:
 # 1. It has to exist.
 # 2. It should be numeric and vector.
 # 3. If there is any problem it has to give back respone for the user.
@@ -24,6 +24,8 @@ test.sd <- function(x) {
 }
 
 # calculate Confidence Intervals from a normal distribution
+# It uses two-sided Confidence Intervals, however, 
+# one-sided Confidence Intervals can be also implement in the future.
 test.confInterval <- function(mean, sd, size, level) {
   # calculate the two-sided value
   level <- 1- ((1 - level) / 2)
