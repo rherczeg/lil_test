@@ -7,3 +7,10 @@ test.mean <- function(x) {
   tmp.mean <- tmp.sum / tmp.length
   return(tmp.mean)
 }
+
+# calculate Standard Deviation
+test.sd <- function(x) {
+  tmp.var <- var(x)
+  tmp.sd <- sqrt(tmp.var)
+  return(tmp.sd)
+}
