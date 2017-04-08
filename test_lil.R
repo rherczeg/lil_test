@@ -14,3 +14,12 @@ test.sd <- function(x) {
   tmp.sd <- sqrt(tmp.var)
   return(tmp.sd)
 }
+
+# calculate Confidence Intervals from a normal distribution
+test.confInterval <- function(mean, sd, size, level) {
+  # calculate the two-sided value
+  level <- 1- ((1 - level) / 2)
+  err <- qnorm(level) * sd/sqrt(size)
+  tmp.confInter <- c(mean - err, mean + err)
+  return(tmp.confInter)
+}
