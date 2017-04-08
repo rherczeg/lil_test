@@ -1,3 +1,11 @@
+# For more robust functions error handling should be applied. Input has to be checked for:
+# 1. It has to exist.
+# 2. It should be numeric and vector.
+# 3. If there is any problem it has to give back respone for the user.
+
+# These suggestions were not applied in this script due to the lack of time.
+
+
 # calculate mean
 test.mean <- function(x) { 
   tmp.sum <- sum(x)
