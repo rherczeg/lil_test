@@ -23,3 +23,12 @@ test.confInterval <- function(mean, sd, size, level) {
   tmp.confInter <- c(mean - err, mean + err)
   return(tmp.confInter)
 }
+
+# set seed
+set.seed(123)
+# create vector
+vec <- runif(8999, 0.0, 1.0)
+
+# calculate the Confidence Intervals and store in a variables
+result <- test.confInterval(test.mean(vec), test.sd(vec), length(vec), .95)
+result
